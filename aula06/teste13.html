@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        body{
+            font: normal 18pt arial;
+            text-align: center;
+            background-color: pink;
+        }
+        #res{
+            width: 720px;
+            height: 504px;
+            font: normal 18pt arial;
+            text-align: center;
+            margin-left: 25%;
+    
+        }
+        #pais{
+            font: normal 18pt arial;
+            margin-bottom: 20px;
+            
+        }
+        #enviar{
+            font: normal 18pt arial;
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Qual é a sua Nacionalidade?</h1>
+    <select name="paises" id="pais">
+        <option value="opcao">Selecione seu país</option>
+        <option value="alemanha" id="ale">ALEMANHA</option>
+        <option value="argentina" id="ar">ARGENTINA</option>
+        <option value="brasil" id="br">BRASIL</option>
+        <option value="eua" id="eua">EUA</option>
+        <option value="franca" id="fra">FRANÇA</option>
+        <option value="italia" id="ita">ITÁLIA</option>
+        <option value="russia" id="ru">RÚSSIA</option>   
+    </select>
+    <input id="enviar" type="button" value="Enviar" onclick="enviar()">
+    <div id="res"></div>
+    
+    <script>
+        function enviar(){
+            var ale = window.document.getElementById('ale')
+            var ar = window.document.getElementById('ar')
+            var br = window.document.getElementById('br')
+            var eua = window.document.getElementById('eua')
+            var fra = window.document.getElementById('fra')
+            var ita = window.document.getElementById('ita')
+            var ru = window.document.getElementById('ru')
+            var res = window.document.getElementById('res')
+            
+
+            if(ale){
+                res.innerHTML = 'Você é Alemão!'
+                res.style.color = 'white'
+                res.style.backgroundImage = 'url(./bandeiras/alemanha.png)'
+                
+            }
+            
+            if(ar){
+                res.innerHTML = 'Você é argentino'
+            }
+
+
+
+
+        
+        
+        
+        }   
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        button{
+            background-color: red;
+            color: white;
+            font-size: large;
+            border-radius: 12%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste javascript</h1>
+
+    <p>clique aqui</p>
+    <button>Mude a cor</button>
+
+    
+
+    <script>
+        var btn = document.querySelector("button");
+        
+        function random(number) {
+          return Math.floor(Math.random() * (number + 1));
+        }
+        
+        btn.onclick = function () {
+          var rndCol =
+        "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+          document.body.style.backgroundColor = rndCol;
+        };
+    </script>
+    
+</body>
+</html>

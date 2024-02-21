@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaja</title>
+    <style>
+        #msg{
+            width: 300px;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            background-color: green;
+            border: 1px solid black;
+            color: white;
+            
+        }
+        body{
+            background-color: pink;
+            font: normal 18pt arial;
+            
+        }
+        #res{
+            font: normal 18pt arial;
+            margin-top: 10px;
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Passe o mouse e clique</h1>
+    <div id="msg">Interaja...</div>
+
+
+    <script>
+        var n1 = window.document.getElementById('msg')
+            n1.addEventListener('click', clicar)
+            n1.addEventListener('mouseenter', entrar)
+            n1.addEventListener('mouseout', sair)
+
+            function clicar(){
+                n1.innerHTML = 'Clicou!'
+                n1.style.background = 'red'
+            }
+            function entrar(){
+                n1.innerHTML = 'Entrou!'
+            }
+            function sair(){
+                n1.innerHTML = 'Saiu!'
+                n1.style.background = 'green'
+            }
+
+        
+    </script>
+
+    <h1>Vamos somar</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Calcular" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <script>
+
+
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var res = window.document.getElementById('res')
+            var s = n1 + n2
+            res.innerHTML = `<p>A soma entre ${n1} e ${n2} é igual a ${s}.</p>`
+        }
+    </script>
+    
+</body>
+</html>

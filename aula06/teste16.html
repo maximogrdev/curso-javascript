@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste condição aninhada</title>
+    <style>
+        body{
+            background-color: pink;
+            font: normal 18pt arial;
+            text-align: center;
+        }
+        #res{
+            margin-top: 30px;
+            margin-left: 25%;
+            width: 720px;
+            height: 504px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual a sua Nacionalidade?</h1>
+
+    <strong>Digite o nome do seu país de origem:</strong> 
+    <input type="text" name="txtn" id="txtn">
+    <input type="button" value="ENVIAR" onclick="clicar()">
+    <div id="res"></div>
+
+
+    <script>
+
+
+        function clicar(){
+            var tn1 = document.getElementById('txtn')
+            var tn = tn1.value.toUpperCase()
+            
+            var br = 'BRASIL'
+            var ale = 'ALEMANHA'
+            var eua = 'EUA'
+            var esp = 'ESPANHA'
+            var res = document.getElementById('res') 
+         
+   
+            if(tn === br){
+                res.innerHTML = 'Você é brasileiro'
+                res.style.backgroundImage = 'url(./bandeiras/brasil.png)'
+            }else if(tn === ale){
+                    res.innerHTML = 'Você é alemão'
+                    res.style.backgroundImage = 'url(./bandeiras/alemanha.png)'
+                    res.style.color = 'white'
+                
+            }else if(tn === eua){
+                        res.innerHTML = "Você é americano"
+                        res.style.backgroundImage = 'url(./bandeiras/eua.png)'
+
+            }else if(tn === esp){
+                            res.innerHTML = 'Você é espanhol'
+                            
+                        
+                    
+                
+            }
+
+        }
+
+    </script>
+
+   
+</body>
+</html>

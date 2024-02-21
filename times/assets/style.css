@@ -1,0 +1,87 @@
+body{
+    background-image: url();
+    font: normal 15pt arial;
+    background-image: url(./img/gramado.jpg);
+    text-align: center;
+    
+}
+header{
+    font: normal 20pt arial;
+    color: yellow;
+    background-color: green;
+    
+
+}
+section{
+    display: inline-flex;
+    text-align: center;
+    align-content: center;
+    font: normal 18pt arial;
+    background-color: white;
+    padding: 10px;
+    border-radius: 40px;
+    
+    
+    border: solid 1px green;
+
+
+}
+input{
+    background-color: black;
+    color: white;
+    
+    
+}
+#selec{
+    font: normal 15pt arial;
+    font-size: large;
+    text-align: center;
+}
+
+#selecao{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font: normal 20pt arial;
+    flex-direction: row;
+
+
+
+}
+#elenco{
+    display: block;
+    margin-left: 10px;
+   font: normal 20pt arial;
+    width: 400px;
+    border-radius: 40px;
+    color: white;
+    background-color:green;
+    
+}
+#escudo{
+    
+    width: 400px;
+    
+}
+option{
+    font: normal 15pt arial;
+    color: green;
+    font-size: large;
+    
+}
+footer{
+    background-color: white;
+    width: 300px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin-left: 40%;
+
+
+}
+img{
+    border-radius: 20px;
+}

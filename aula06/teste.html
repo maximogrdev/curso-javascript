@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Escolar</title>
+    <style>
+        body{
+            background-color: black;
+            color: yellow;
+            font-size: large;
+         
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Média Escolar</h1>
+
+    
+    <script>
+        var nota1 = Number(window.prompt(`Digite sua primeira nota `))
+        var nota2 = Number(window.prompt(`Digite sua segunda nota `))
+        var nota3 = Number(window.prompt(`Digite sua terceira nota `))
+        var nota4 = Number(window.prompt(`Digite sua quarta nota`))
+
+        var media = (nota1 + nota2 + nota3 + nota4)/4
+
+        if(media >= 60){
+            document.write(`Meus Parabéns! Sua média escolar é ${media.toFixed(2)}`)
+
+        }else{
+            document.write(`Infelizmente você não foi aprovado. Sua média foi ${media.toFixed(2)} . Tente novamente. `)
+        }
+    </script>
+</body>
+
+</html>

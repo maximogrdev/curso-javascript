@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE DE VELOCIDADE</title>
+    <style>
+        body{
+            background-color: #fefe10;
+            font: normal 18pt arial;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>LIMITE DE VELOCIDADE</h1>
+    Digite a sua velocidade atual : <input type="number" name="vel" id="vel">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id="res"></div>
+
+
+    <script>
+        function clicar(){
+            var vel = window.document.getElementById('vel')
+            var limite = 80
+            var vel2 = Number(vel.value)
+            var vel3 = vel2 - limite
+            var res = window.document.getElementById('res')
+
+            if(vel2 <= limite){
+                res.innerHTML = `<p>Sua velocidade atual é <strong>${vel2}km/h</strong> e está dentro do limite permitido!`
+                res.innerHTML += `<p>Dirija com o cinto de segurança!</p>`
+                res.style.color = 'blue'
+               
+            }else{
+                res.innerHTML = `<p>Você foi MULTADO! Sua velocidade atual é <strong>${vel2}km/h</strong> e está <strong>${vel3}km/h</strong> acima do limite de velocidade.</p> `
+                res.innerHTML += `<strong>Diminua para a velocidade limite de ${limite}km/h.</strong>`
+                
+                res.style.color = 'red'
+             
+            }
+            if(vel2 <= 0){
+                res.innerHTML = '<p> Digite uma velocidade válida !</p>'
+                
+            }
+        }
+    </script>
+    
+</body>
+</html>

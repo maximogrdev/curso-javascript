@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang=pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 5</title>
+    <style>
+       div{
+        display: inline-block;
+        flex-wrap: nowrap;
+        border: 1px solid black;
+        width: 600px;
+        height: 300px;
+        margin-bottom: 5px;
+        text-align: center;
+        line-height: 300px;
+        background-color: white;
+  
+       }
+       body{
+       background-color: aqua;
+       
+
+       }
+    </style>
+</head>
+<body>
+
+<div class="um">verde</div>
+<div class="dois">amarelo</div>
+<div class="tres">roxo</div>
+<div class="quatro">vermelho</div>
+  
+
+<script>
+        var a = window.document.querySelector('.um')
+            a.addEventListener('click', verde )
+            a.addEventListener('mouseout',sair)
+       
+        var b = window.document.querySelector('.dois')
+            b.addEventListener('click', amarelo )
+            b.addEventListener('mouseout', leave)
+
+        var c = window.document.querySelector('.tres')
+            c.addEventListener('click', roxo)
+            c.addEventListener('mouseout', roxoSair)
+
+        var d = window.document.querySelector('.quatro')
+            d.addEventListener('click', vermelho)
+            d.addEventListener('mouseout', vermelhoSair)
+
+       
+    
+    function verde(){
+
+       
+        a.style.background = "green"
+        
+    }
+    function sair(){
+        
+        a.style.background = 'white'
+    }
+ 
+    function amarelo(){
+
+        
+        b.style.background = "yellow"
+    }
+    function leave(){
+       
+        b.style.background = 'white'
+    }
+
+    function roxo(){
+        c.style.background = 'purple'
+    }
+    function roxoSair(){
+        c.style.background = 'white'
+    }
+
+    function vermelho(){
+        d.style.background = 'red'
+    }
+    
+    function vermelhoSair(){
+        d.style.background = 'white'
+
+    }
+
+   
+   
+</script>
+</body>
+</html>
