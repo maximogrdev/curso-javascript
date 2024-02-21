@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando switch</title>
+    <style>
+        body{
+            font: normal 18pt arial;
+            text-align: center;
+            background-color: rgb(251, 218, 255);
+            color: rgb(51, 129, 9);
+            
+        }
+        h2{
+            color: blue;
+        }
+        img{
+            margin-top: 20px;
+            width: 300px;
+            height: auto;
+            border: solid 1px black;
+            border-radius: 50%;
+            
+        }
+        .detalhes{
+            width: 600px;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            color: black;
+            
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sacolão</h1>
+    </header>
+    <section>
+        <h2>
+            FRUTAS
+        </h2>
+        <select name="frutas" id="frutas">
+            <option value="0">Selecione a fruta</option>
+            <option value="1">Laranja Pera</option>
+            <option value="2">Maçã</option>
+            <option value="3">Banana</option>
+        </select>
+        <input type="button" value="escolher" onclick="enviar()">
+        <section>
+            <img class="fotos" src="" alt="">
+            <article class="detalhes"></article>
+        </section>
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+        function enviar(){
+            var compras = document.querySelector('#frutas');
+            var frutas = compras.selectedIndex;
+            var imagem = document.querySelector('.fotos')
+            var msg = document.querySelector('.detalhes');
+            
+                
+
+            switch(frutas){
+                case 1: 
+                    imagem.src= './laranja.jpg'
+                    msg.innerHTML = '<p>Com propriedades antioxidantes, a laranja pera traz, além da vitamina C, sais minerais como o cálcio, potássio, sódio e fósforo e vitaminas do complexo B. O consumo de duas laranjas por dia é suficiente para garantir a quantidade diária de vitamina C de que o organismo necessita.</p>';
+                break;
+
+                case 2:
+                    imagem.src= './maca.jpg'
+                    msg.innerHTML = '<p>Maçã é rica em potássio e fibras. Além disso, contém boas quantidades de fósforo, magnésio e cálcio e também conta com vitaminas do complexo B e vitamina C.</p>';
+                break;
+
+                case 3:
+                    imagem.src= './banana.png'
+                    msg.innerHTML = '<p>Cheia de nutrientes, a fruta auxilia a regularizar o sistema nervoso e o aparelho digestivo. Além disso, o consumo regular oferece resistência aos vasos sanguíneos e evita câimbras, devido à presença do potássio. Enquanto as vitaminas do complexo B são responsáveis pela renovação celular e dos músculos.</p>'
+                break
+
+                default: msg.innerHTML = 'Escolha uma fruta!'
+                imagem.src= './cesta.png'
+                
+
+            }
+
+            
+
+        }
+
+    </script>
+    
+</body>
+</html>
