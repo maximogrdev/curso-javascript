@@ -1,0 +1,31 @@
+body{
+    font: normal 15pt arial;
+    text-align: center;
+    align-items: center;
+    
+
+}
+header{
+    font: normal 18pt arial;
+    color: white;
+
+}
+section{
+    border: solid 1px black;
+    width: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    margin: auto;
+    background-color: white;
+    align-content: center;
+    color: white;
+    
+    
+
+}
+footer{
+    font: normal 12pt serif;
+    margin-top: 50px;
+}
